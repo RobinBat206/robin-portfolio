@@ -1,4 +1,4 @@
-Certainly! Here’s a sample README file for your Flask and Next.js application:
+This is a portfolio website for Robin. Please follow the instructions to run locally on your machine.
 
 ---
 
