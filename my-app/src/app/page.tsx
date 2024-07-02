@@ -7,7 +7,7 @@ const Page: React.FC = () => {
   const [data, setData] = useState<any>(null);
 
   useEffect(() => {
-    fetch("http://127.0.0.1:8080/api/home")
+    fetch("http://167.99.57.54:8080/api/home")
       .then(response => response.json())
       .then(data => {
         setData(data);
