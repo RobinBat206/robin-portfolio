@@ -1,6 +1,8 @@
 from flask import Flask, jsonify
 from flask_cors import CORS
 
+# Set up Flask application with CORS, which allows requests from different domains
+
 app = Flask(__name__)
 CORS(app)
 
@@ -43,7 +45,7 @@ def get_profile():
                 '/pic2.png',
                 '/pic3.png'
         ],
-        'hobbiesDescription': "I like to play and watch basketball. I also like to rock climb and take photo's as well as travel",
+        'hobbiesDescription': "I like to play and watch basketball. I also like to rock climb and take photo's as well as travel!!!!",
         "education": [
             {
                 "degree": "Bachelor of Science in Computer Science",
@@ -62,5 +64,6 @@ def get_profile():
     }
     return jsonify(profile_data)
 
+#Set port, setup server for external access
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=8080)
