@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { ResponsiveBar } from "@nivo/bar";
 
+/* This loads the JSON data from the backend. */
 const Page: React.FC = () => {
   const [data, setData] = useState<any>(null);
 
@@ -18,49 +19,7 @@ const Page: React.FC = () => {
     return <div>Loading...</div>;
   }
 
-  const BarChart = (props: JSX.IntrinsicAttributes & React.ClassAttributes<HTMLDivElement> & React.HTMLAttributes<HTMLDivElement>) => (
-    <div {...props}>
-      <ResponsiveBar
-        data={data.travels}
-        keys={["count"]}
-        indexBy="name"
-        margin={{ top: 0, right: 0, bottom: 40, left: 40 }}
-        padding={0.3}
-        colors={["#2563eb"]}
-        axisBottom={{
-          tickSize: 0,
-          tickPadding: 16,
-        }}
-        axisLeft={{
-          tickSize: 0,
-          tickValues: 4,
-          tickPadding: 16,
-        }}
-        gridYValues={4}
-        theme={{
-          tooltip: {
-            chip: {
-              borderRadius: "9999px",
-            },
-            container: {
-              fontSize: "12px",
-              textTransform: "capitalize",
-              borderRadius: "6px",
-            },
-          },
-          grid: {
-            line: {
-              stroke: "#f3f4f6",
-            },
-          },
-        }}
-        tooltipLabel={({ id }) => `${id}`}
-        enableLabel={false}
-        role="application"
-        ariaLabel="A bar chart showing data"
-      />
-    </div>
-  );
+
 
   return (
     <div className="flex flex-col min-h-[100dvh]">
@@ -156,7 +115,6 @@ const Page: React.FC = () => {
       <section className="w-full py-12 md:py-24 lg:py-32">
         <div className="container grid items-center gap-6 px-4 md:px-6 lg:grid-cols-2 lg:gap-10">
           <div className="flex flex-col items-center justify-center">
-            <BarChart className="aspect-[4/3]" />
             <img
               src="/travelMap.png"
               width="800"
