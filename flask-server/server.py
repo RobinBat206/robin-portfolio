@@ -9,7 +9,7 @@ def get_profile():
     profile_data = {
         "name": "Robin Batingan",
         "occupation": "Student & Software Engineer",
-        "about": "Hi, my name is Robin and I am an aspiring Software Developer and a 4th year student at North Seattle College. I have skills in Java and Python, as well as expierence in SQL, HTML/CSS, and Javascript. I like to play absketball and read in my freetime.",
+        "about": "Hi, my name is Robin and I am an aspiring Software Developer and a 4th year student at North Seattle College. I have skills in Java and Python, as well as expierence in SQL, HTML/CSS, and Javascript. I like to play basketball and read in my freetime.",
         "work_experience": [
             {
                 "title": "Site Reliability Engineer Fellowship",
